@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Upload and Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #444;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input, textarea {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="file"] {
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .nft-list {
+            margin-top: 30px;
+        }
+
+        .nft-item {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .nft-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            margin-right: 15px;
+        }
+
+        .nft-item .details {
+            flex-grow: 1;
+        }
+
+        .nft-item .details h3 {
+            margin: 0 0 5px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .nft-item .details p {
+            margin: 5px 0;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Upload and List Your NFT</h1>
+        <form id="nftForm">
+            <label for="identifier">Unique Identifier</label>
+            <input type="text" id="identifier" name="identifier" placeholder="Enter a unique identifier" required>
+
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" placeholder="Enter the NFT title" required>
+
+            <label for="description">Description</label>
+            <textarea id="description" name="description" placeholder="Enter a brief description" rows="4" required></textarea>
+
+            <label for="media">Media File</label>
+            <input type="file" id="media" name="media" accept="image/*" required>
+
+            <button type="submit">Upload NFT</button>
+        </form>
+
+        <div class="nft-list" id="nftList">
+            <h2>Listed NFTs</h2>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('nftForm');
+        const nftList = document.getElementById('nftList');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const identifier = document.getElementById('identifier').value;
+            const title = document.getElementById('title').value;
+            const description = document.getElementById('description').value;
+            const mediaFile = document.getElementById('media').files[0];
+
+            if (mediaFile) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const nftItem = document.createElement('div');
+                    nftItem.classList.add('nft-item');
+
+                    nftItem.innerHTML = `
+                        <img src="${e.target.result}" alt="${title}">
+                        <div class="details">
+                            <h3>${title}</h3>
+                            <p><strong>Identifier:</strong> ${identifier}</p>
+                            <p>${description}</p>
+                        </div>
+                    `;
+
+                    nftList.appendChild(nftItem);
+
+                    form.reset();
+                };
+
+                reader.readAsDataURL(mediaFile);
+            }
+        });
+    </script>
+</body>
+</html>

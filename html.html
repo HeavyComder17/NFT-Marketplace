@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NFT Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <table>
+            <th>
+                <div class="logo">
+                    <a href="file:///C:/Users/Parth%20Singh/OneDrive/Project/html.html">
+                        <img src="logo3.jpeg" alt="logo"></a>
+                </div>
+            </th>
+            <th>
+                <div class="name" onclick="location.href='html.html';" style="cursor: pointer;">CryptoBlock</div>
+            </th>
+        </table>
+
+        <div class="search-bar">
+            <input type="text" placeholder="Search items, collections, and accounts">
+            <button>Search <i class="fas fa-search"></i></button>
+        </div>
+
+        <nav>
+            <ul>
+                <li id="art-button-scroll">Art</li>
+                <li id="gaming-button-scroll">Gaming</li>
+                <li id="photography-button-scroll">Photography</li>
+                <li id="music-button-scroll">Music</li>
+            </ul>
+        </nav>
+        <div class="actions">
+            <button onclick="location.href='nft-listing.html';">List</button>
+            <button id="login-btn">SignUp </button>
+            <button onclick="location.href='wallet-details.html';" class="wallet-btn">Wallet</button>
+        </div>
+    </header>
+
+    <!-- Main Silder -->
+    <section class="slider">
+        <div class="slider-item active">
+            <img src="ape_nft.webp" alt="ape_nft">
+            <p>XOCIETY Frontier <span>Floor: 0.05 ETH</span></p>
+        </div>
+        <div class="slider-item">
+            <img src="gamer_nft_image.jpeg" alt="gamer_nft">
+            <p>Infinite Images <span>Floor: 0.9 ETH</span></p>
+        </div>
+        <div class="slider-item">
+            <img src="shop_nft_img.jpeg" alt="photography_nft">
+            <p>ALTS by adidas <span>Floor: 0.06 ETH</span></p>
+        </div>
+        <div class="slider-item">
+            <img src="music_nft_img.jpeg" alt="music_nft">
+            <p>ALTS by adidas <span>Floor: 0.06 ETH</span></p>
+        </div>
+        <div class="slider-item video">
+            <video src="nft_video.mp4" controls></video>
+            <p>ALTS by adidas <span>Floor: 0.06 ETH</span></p>
+        </div>
+        <button class="prev-btn">❮</button>
+        <button class="next-btn">❯</button>
+    </section>
+
+    <!-- Top Buys Section -->
+    <section class="trending">
+        <h2>Top Collector Buys Today</h2>
+        <div class="grid">
+            <div class="card1">
+                <p>Ape</p>
+                <span>Floor: 0.03 ETH</span>
+                <span>Total Volume: 3478 ETH</span>
+            </div>
+            <div class="card2">
+                <p>Courtyard.io</p>
+                <span>Floor: 0.4 ETH</span>
+                <span>Total Volume: 2140 ETH</span>
+            </div>
+            <div class="card3">
+                <p>Chonks</p>
+                <span>Floor: 0.01 ETH</span>
+                <span>Total Volume: 1068 ETH</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notable Collections -->
+    <section class="collections">
+        <h2>Notable Collections</h2>
+        <div class="grid">
+            <div class="card">
+                <p>OCH Genesis Ring <span style="color: aqua;">&#10003</span></p>
+                <span>Floor: 2.55 ETH</span>
+                <span>24h Volume: 450 ETH</span>
+            </div>
+            <div class="card">
+                <p>Pudgy Penguins<span style="color: aqua;"> &#10003</span></p>
+                <span>Floor: 33.15 ETH</span>
+                <span>24h Volume: 1500 ETH</span>
+            </div>
+            <div class="card">
+                <p>V <span style="color: aqua;">&#10003</span></p>
+                <span>Floor: 1.32 ETH</span>
+                <span>24h Volume: 77 ETH</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Table Section -->
+    <section class="table-container">
+        <h2>Trending Collections</h2>
+        <table class="table">
+            <thead class="thead">
+                <tr>
+                    <th class="th">Rank</th>
+                    <th class="th">Collection</th>
+                    <th class="th">Floor Price</th>
+                    <th class="th">Volume</th>
+                </tr>
+            </thead>
+            <tbody class="tbody">
+                <tr>
+                    <td class="td">1</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="Burgers?" class="collection-icon">
+                        Burgers?
+                    </td>
+                    <td class="td">0.03 ETH</td>
+                    <td class="td">165 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">2</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="Courtyard.io" class="collection-icon">
+                        Courtyard.io
+                    </td>
+                    <td class="td">1.02 ETH</td>
+                    <td class="td">24 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">3</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="Chonks" class="collection-icon">
+                        Chonks
+                    </td>
+                    <td class="td"> 0.01 ETH</td>
+                    <td class="td">19 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">4</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="Gemesis" class="collection-icon">
+                        Gemesis
+                    </td>
+                    <td class="td">0.05 ETH</td>
+                    <td class="td">60 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">5</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="BEANZ Official" class="collection-icon">
+                        BEANZ Official
+                    </td>
+                    <td class="td">0.77 ETH</td>
+                    <td class="td">427 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">6</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="SNACKGANG" class="collection-icon">
+                        SNACKGANG
+                    </td>
+                    <td class="td">0.46 ETH</td>
+                    <td class="td">277 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">7</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="MetaWinners" class="collection-icon">
+                        Meta Winners
+                    </td>
+                    <td class="td">1.08 ETH</td>
+                    <td class="td">157 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">8</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="Azuki Elementals" class="collection-icon">
+                        Azuki Elementals
+                    </td>
+                    <td class="td">0.89 ETH</td>
+                    <td class="td">1023 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">9</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="AGIX" class="collection-icon">
+                        AGIX
+                    </td>
+                    <td class="td">0.3 ETH</td>
+                    <td class="td">42 ETH</td>
+                </tr>
+                <tr>
+                    <td class="td">10</td>
+                    <td class="td">
+                        <img src="art_nft_img.jpeg" alt="Zygote" class="collection-icon">
+                        Zygote
+                    </td>
+                    <td class="td">0.02 ETH</td>
+                    <td class="td">6 ETH</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+
+    <!-- Treding in Arts Section -->
+    <div class="art-section">
+        <h2>Trending in Art</h2>
+        <div class="art-carousel-container">
+            <button class="art-carousel-btn art-left-btn">&#8249;</button>
+            <div class="art-carousel">
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 1">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 1</p>
+                        <p class="art-floor">Floor: 1.2 ETH</p>
+                        <p class="art-volume">24h Volume: 3.5 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 2</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 3</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 4</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 5</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 6</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 7</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 8</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="art-item">
+                    <img src="ape_nft.webp" alt="Art 2">
+                    <div class="art-details">
+                        <p class="art-name">Art Piece 9</p>
+                        <p class="art-floor">Floor: 0.8 ETH</p>
+                        <p class="art-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <button class="art-carousel-btn art-right-btn">&#8250;</button>
+        </div>
+    </div>
+
+
+    <!-- Trending in Gaming Section -->
+    <div class="gaming-section">
+        <h2>Trending in Gaming</h2>
+        <div class="gaming-carousel-container">
+            <button class="gaming-carousel-btn gaming-left-btn">&#8249;</button>
+            <div class="gaming-carousel">
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 1">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 1</p>
+                        <p class="gaming-floor">Floor: 1.2 ETH</p>
+                        <p class="gaming-volume">24h Volume: 3.5 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="gaming-item">
+                    <img src="ape2_nft.jpg" alt="gaming 2">
+                    <div class="gaming-details">
+                        <p class="gaming-name">Gaming Piece 2</p>
+                        <p class="gaming-floor">Floor: 0.8 ETH</p>
+                        <p class="gaming-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <button class="-carousel-btn -right-btn">&#8250;</button>
+        </div>
+    </div>
+
+    <!-- Trending in Photography Section -->
+    <div class="photography-section">
+        <h2>Trending in Photography</h2>
+        <div class="photography-carousel-container">
+            <button class="photography-carousel-btn photography-left-btn">&#8249;</button>
+            <div class="photography-carousel">
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 1">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 1</p>
+                        <p class="photography-floor">Floor: 1.2 ETH</p>
+                        <p class="photography-volume">24h Volume: 3.5 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="photography-item">
+                    <img src="ape3_nft.png" alt="Photography 2">
+                    <div class="photography-details">
+                        <p class="photography-name">Photography Piece 2</p>
+                        <p class="photography-floor">Floor: 0.8 ETH</p>
+                        <p class="photography-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <button class="photography-carousel-btn photography-right-btn">&#8250;</button>
+        </div>
+    </div>
+
+    <!-- Trending in Music Section -->
+    <div class="music-section">
+        <h2>Trending in Music</h2>
+        <div class="music-carousel-container">
+            <button class="music-carousel-btn music-left-btn">&#8249;</button>
+            <div class="music-carousel">
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 1">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 1</p>
+                        <p class="music-floor">Floor: 1.2 ETH</p>
+                        <p class="music-volume">24h Volume: 3.5 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+                <div class="music-item">
+                    <img src="ape4_nft.jpg" alt="Music 2">
+                    <div class="music-details">
+                        <p class="music-name">Music Piece 2</p>
+                        <p class="music-floor">Floor: 0.8 ETH</p>
+                        <p class="music-volume">24h Volume: 2.1 ETH</p>
+                    </div>
+                </div>
+            </div>
+            <button class="music-carousel-btn music-right-btn">&#8250;</button>
+        </div>
+    </div>
+
+    <!-- Contact Support & Social Media Section -->
+    <div class="support-social-container">
+        <!-- Contact Support -->
+        <div class="contact-support">
+            <h3>Contact Support</h3>
+            <p>Have questions or need help? Contact us:</p>
+            <a href="gmail.com" class="support-link">abc@gmail.com</a>
+        </div>
+
+        <!-- Social Media -->
+        <div class="social-media">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+                <div class="social-media">
+                    <a href="https://twitter.com/yourprofile" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com/yourprofile" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/yourprofile" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/yourprofile" target="_blank"><i class="fab fa-discord"></i>
+                        <a href="https://reddit.com/yourprofile" target="_blank"><i class="fab fa-reddit"></i></a>
+                        <a href="https://youtube.com/yourprofile" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2024 WebsiteName. All Rights Reserved.</p>
+            <ul class="footer-links">
+                <li><a href="/privacy-policy" target="_blank">Privacy Policy</a></li>
+                <li><span class="separator">•</span></li>
+                <li><a href="/terms-of-service" target="_blank">Terms of Service</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="firebase_script.js" defer type="module"></script>
+</body>
+
+</html>
