@@ -79,3 +79,62 @@ document.getElementById('music-button-scroll').addEventListener('click', functio
 
 
 
+const searchInput = document.querySelector(".search-bar input");
+
+const placeholders = ["items...", "collections...", "accounts..."];
+let currentIndex = 0;
+let currentText = "";
+let isDeleting = false;
+let charIndex = 0;
+let typingSpeed = 50; // Speed of typing
+let backspaceSpeed = 70; // Speed of backspacing
+let delayBetweenWords = 2000; // Delay before deleting
+let loopDelay = 0; // Delay before next word starts
+
+function typeEffect() {
+    const baseText = "Search "; // Always keep "Search" fixed
+
+    if (isDeleting) {
+        currentText = placeholders[currentIndex].substring(0, charIndex--);
+    } else {
+        currentText = placeholders[currentIndex].substring(0, charIndex++);
+    }
+
+    searchInput.setAttribute("placeholder", baseText + currentText);
+
+    if (!isDeleting && charIndex === placeholders[currentIndex].length + 1) {
+        isDeleting = true;
+        setTimeout(typeEffect, delayBetweenWords); // Wait before backspacing
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        currentIndex = (currentIndex + 1) % placeholders.length;
+        setTimeout(typeEffect, loopDelay); // Wait before typing new word
+    } else {
+        setTimeout(typeEffect, isDeleting ? backspaceSpeed : typingSpeed);
+    }
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuItems = document.querySelectorAll("ul li");
+
+    menuItems.forEach((item) => {
+        item.addEventListener("mouseover", () => {
+            menuItems.forEach((otherItem) => {
+                if (otherItem !== item) {
+                    otherItem.classList.add("blurred");
+                }
+            });
+        });
+
+        item.addEventListener("mouseleave", () => {
+            menuItems.forEach((otherItem) => {
+                otherItem.classList.remove("blurred");
+            });
+        });
+    });
+});
+
+
+
+

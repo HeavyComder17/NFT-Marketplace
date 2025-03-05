@@ -37,35 +37,37 @@ header {
 
 .name {
     display: inline-block;
-    color: #fff;
+    color: #d1d1d1;
     font-size: 20px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     text-decoration: none;
-    padding-bottom: 10px;
+    
 }
 
 /* Search Bar */
 .search-bar {
     display: flex;
     align-items: center;
-    gap: 10px;
-    color: #fff;
+    gap: 13px;
+    color: #d1d1d1;
 }
 
 .search-bar input {
-    padding: 8px 12px;
-    border: 1px solid #e6e6e6;
+    padding: 7px 12px;
+    
+    border: 1px solid #d1d1d1;
     border-radius: 4px;
     font-size: 14px;
-    width: 250px;
+    width: 315px;
+    color: #d1d1d1;
 }
 
 .search-bar button {
-    padding: 8px 16px;
+    padding: 8.6px 14px;
     border: none;
     background-color: #1d72b8;
-    color: white;
+    color: #d1d1d1;
     border-radius: 4px;
     cursor: pointer;
     font-size: 14px;
@@ -75,7 +77,12 @@ header {
 .search-bar button:hover {
     background-color: #155a92;
 }
-
+.search-bar input::placeholder {
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.7;
+    color: #d1d1d1;
+}
 
 nav ul {
     list-style: none;
@@ -500,6 +507,10 @@ h2 {
     text-decoration: none;
     font-weight: bold;
 }
+button i {
+    background: none;  /* Removes any background */
+    color: inherit;  /* Ensures the icon follows button text color */
+}
 
 .support-link:hover {
     text-decoration: underline;
@@ -549,6 +560,7 @@ h2 {
     font-size: 0.9rem;
 }
 
+
 .footer p {
     margin: 0;
     font-size: 1rem;
@@ -594,4 +606,84 @@ h2 {
         margin-top: 0.5rem;
     }
 }
+/* Base styles */
+#art-button-scroll,
+#gaming-button-scroll,
+#photography-button-scroll,
+#music-button-scroll {
+    color:  #d1d1d1;
+    position: relative;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: color 1s ease;
+    display: inline-block; /* Prevents unwanted gaps */
+}
+
+/* Underline effect */
+#art-button-scroll::after,
+#gaming-button-scroll::after,
+#photography-button-scroll::after,
+#music-button-scroll::after {
+    content: ""; 
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #007bff;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+/* Hover effect */
+#art-button-scroll:hover,
+#gaming-button-scroll:hover,
+#photography-button-scroll:hover,
+#music-button-scroll:hover {
+    color: #007bff;
+}
+
+#art-button-scroll:hover::after,
+#gaming-button-scroll:hover::after,
+#photography-button-scroll:hover::after,
+#music-button-scroll:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Blur effect (Fixed) */
+ul {
+    display: flex;
+    gap: 15px; /* Adds space between items */
+}
+
+/* Set initial visibility to full */
+ul li {
+    transition: filter 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+/* Apply blur only when hovering over a specific item */
+ul:hover li {
+    opacity: 1; /* Keep all items visible by default */
+    filter: none;
+}
+
+ul li:hover {
+    opacity: 1; /* Ensure hovered item stays fully visible */
+    filter: none;
+}
+
+ul li:not(:hover) {
+    filter: blur(2px);
+    opacity: 0.5; /* Slight fade effect */
+}
+
+/* Remove blur when not hovering anywhere */
+ul:not(:hover) li {
+    filter: none;
+    opacity: 1;
+}
+
+
 
